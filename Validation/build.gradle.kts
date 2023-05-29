@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    id("maven-publish")
 }
 
 android {
@@ -34,7 +35,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -43,4 +43,14 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(libs.commons.text)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.tomtruyen"
+            artifactId = "validation"
+            version = "1.0.0"
+        }
+    }
 }
