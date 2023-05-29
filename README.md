@@ -1,6 +1,8 @@
 
 # Android Validator
 
+[![](https://jitpack.io/v/TomTruyen/Android-Validator.svg)](https://jitpack.io/#TomTruyen/Android-Validator)
+
 A simple validator for your objects and field using Annotations. This library can be used in both Jetpack Compose and XML Android projects. 
 
 
