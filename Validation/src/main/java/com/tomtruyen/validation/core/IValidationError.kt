@@ -4,5 +4,5 @@ import java.lang.reflect.Field
 
 interface IValidationError {
     val error: String
-    val field: Field
+    val field: Field?
 }
