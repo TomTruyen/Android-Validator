@@ -10,7 +10,10 @@ class RequiredValidator: IValidator<String> {
         return if(value.isNotBlank() && value.isNotEmpty()) {
             null
         } else {
-            ValidationError("${field.name} field is required")
+            ValidationError(
+                error = "${field.name} field is required",
+                field = field
+            )
         }
     }
 }

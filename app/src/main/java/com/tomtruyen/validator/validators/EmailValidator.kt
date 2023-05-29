@@ -11,7 +11,10 @@ class EmailValidator: IValidator<String> {
         return if(value.matches(Regex(Constants.EMAIL_REGEX))) {
             null
         } else {
-            ValidationError("${field.name} field is not a valid email")
+            ValidationError(
+                error = "${field.name} field is not a valid email",
+                field = field
+            )
         }
     }
 }
